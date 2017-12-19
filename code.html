@@ -1,250 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-		
-<head><title>Examples of Code</title>
-    <center> <h1 style="font-size: 40px; color: #18424e;">Code Stuff</h1></center>
+
+<head>
+    <title>Examples of Code</title>
+    <center>
+        <h1 style="font-size: 40px; color: #18424e;">Code Stuff</h1>
+    </center>
 </head>
 
 <body>
-<body style="background-color: #c4e4ed;">
-<br><br><p style="color: #18424e"><center>
-Javascript Examples
 
-    
-    
-    
-    
-    
-    
+    <body style="background-color: #c4e4ed;">
+        <br><br>
+        <p style="color: #18424e">
+            <center>
+                Javascript Examples
 
-<h2>Fahrenheit/Celsius Converter</h2>
 
-<form id="temp" action="/action_page.php">
-    <label for="test">Fahrenheit Temperature:</label>
-    <input type="text" name="fTemp" id="test">
-    </form>
-    
-    
-   <br> <button type="button"
-onclick= "convertTemp()">
+
+
+
+                <h2>Fahrenheit/Celsius Converter</h2>
+
+                <form id="temp" action="/action_page.php">
+                    <label for="test">Fahrenheit Temperature:</label>
+                    <input type="text" name="fTemp" id="test">
+                </form>
+
+
+                <br> <button type="button" onclick="convertTemp()">
 Enter</button>
 
-<p id="demo"></p>
-    
-   <script>
-  function convertTemp() {
-   var num1 = 32;
-   var num2 = 5/9;
-   var x = document.getElementById('temp');
-   var fTemp = x.elements[0].value;
-   var cTemp = (fTemp - num1) * num2
-  
- 
-document.getElementById("demo").innerHTML = fTemp + " degrees in Celsius is: " + cTemp + " degrees.";
-}
-  </script>
-</center></p>
+                <p id="demo"></p>
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-// Problem Statement:
-	Writing a program that can calculate slope, or rise over run.
-Plans & Pseudocode:
-	Ask user for both y values and both x values
-	Rise/Run= y2-y1 divided by x2-x1
+                <script>
+                    function convertTemp() {
+                        var num1 = 32;
+                        var num2 = 5 / 9;
+                        var x = document.getElementById('temp');
+                        var fTemp = x.elements[0].value;
+                        var cTemp = (fTemp - num1) * num2
 
-<br>
-<br><br><p style="color: #18424e"><center>
 
-<h2>Slope Calculator</h2>
-<br>
-<form id="x1" action="/action_page2.php">
-    <label for="test2">X1:</label> <input type="text" name="run1" id="test2">
-</form>
-<br>
-<form id="y1" action="/action_page2.php">
-    <label for="test3">Y1:</label> <input type="text" name="rise1" id="test3">
-</form>
-<br>
-<form id="x2" action="/action_page2.php">
-    <label for="test4">X2:</label> <input type="text" name="run2" id="test4">
-</form>
-<br>
-<form id="y2" action="/action_page2.php">
-    <label for="test5">Y2:</label> <input type="text" name="rise2" id="test5">
-</form>
+                        document.getElementById("demo").innerHTML = fTemp + " degrees in Celsius is: " + cTemp + " degrees.";
+                    }
+                </script>
+            </center>
+        </p>
 
-   <br> <button type="button"
-onclick= "calcSlope()">
+
+
+
+
+        // Problem Statement: Writing a program that can calculate slope, or rise over run. Plans & Pseudocode: Ask user for both y values and both x values Rise/Run= y2-y1 divided by x2-x1
+
+        <br>
+        <br><br>
+        <p style="color: #18424e">
+            <center>
+
+                <h2>Slope Calculator</h2>
+                <br>
+                <form id="x1" action="/action_page2.php">
+                    <label for="test2">X1:</label> <input type="text" name="run1" id="test2">
+                </form>
+                <br>
+                <form id="y1" action="/action_page2.php">
+                    <label for="test3">Y1:</label> <input type="text" name="rise1" id="test3">
+                </form>
+                <br>
+                <form id="x2" action="/action_page2.php">
+                    <label for="test4">X2:</label> <input type="text" name="run2" id="test4">
+                </form>
+                <br>
+                <form id="y2" action="/action_page2.php">
+                    <label for="test5">Y2:</label> <input type="text" name="rise2" id="test5">
+                </form>
+
+                <br> <button type="button" onclick="calcSlope()">
 Enter</button>
 
-<p id="sloperes"></p>
-    
-   <script>
-  function calcSlope() {
-   
-   var x = document.getElementById('x1');
-   var x1 = x.elements[0].value;
+                <p id="sloperes"></p>
 
-   var y = document.getElementById('y1');
-   var y1 = y.elements[0].value;
+                <script>
+                    function calcSlope() {
 
-   var xx = document.getElementById('x2');
-   var x2 = xx.elements[0].value;
+                        var x = document.getElementById('x1');
+                        var x1 = x.elements[0].value;
 
-   var yy = document.getElementById('y2');
-   var y2 = yy.elements[0].value;
-   
-   var Slope = (y2-y1)/(x2-x1);
-   if ((x2-x1) == 0) {
-   Slope = "undefined";
-  }
-  
-document.getElementById("sloperes").innerHTML = "The slope of these points is: " + Slope + ".";
-}
-  </script>
-</center></p>
+                        var y = document.getElementById('y1');
+                        var y1 = y.elements[0].value;
 
-    
-    
-    
-    
-    
-    
-    
-// Problem Statement
-	Writing a program that can change a form of a line.
-Plans & Pseudocode
-	Ask user for values corresponding to the line form.
-	Original is y - y1 = m(x-x1), trying to convert to y = mx + b.
+                        var xx = document.getElementById('x2');
+                        var x2 = xx.elements[0].value;
 
-<br>
-<br><br><p style="color: #18424e"><center>
+                        var yy = document.getElementById('y2');
+                        var y2 = yy.elements[0].value;
 
-<h2>Point Slope Form to Slope Intercept Form</h2>
-<strong>y - y1 = m(x-x1)<br> to<br> y = mx + b<br></strong>
-<br>
-    <form id="ya" action="/action_page.php">y +<br> <label for="test10">-y1:</label> 
-<input type="text" name="thisdontmatter" id="test10">
-<br><br>=</form>  
+                        var Slope = (y2 - y1) / (x2 - x1);
+                        if ((x2 - x1) == 0) {
+                            Slope = "undefined";
+                        }
 
-<form id="mb" action="/action_page.php"><label for="test11">m:</label>
-<input type="text" name="stilldontmatter" id="test11">
-    <br><br>*</form>
-(x +
-<form id="xc" action="/action_page3.php"><label for="test12">-x1:</label><input type="text" name="ineednewvariables" id="test12">
-</form>
-)
- <br> <button type="button"
-onclick= "sloInt()">
+                        document.getElementById("sloperes").innerHTML = "The slope of these points is: " + Slope + ".";
+                    }
+                </script>
+            </center>
+        </p>
+
+
+
+
+
+        // Problem Statement Writing a program that can change a form of a line. Plans & Pseudocode Ask user for values corresponding to the line form. Original is y - y1 = m(x-x1), trying to convert to y = mx + b.
+
+        <br>
+        <br><br>
+        <p style="color: #18424e">
+            <center>
+
+                <h2>Point Slope Form to Slope Intercept Form</h2>
+                <strong>y - y1 = m(x-x1)<br> to<br> y = mx + b<br></strong>
+                <br>
+                <form id="ya" action="/action_page.php">y +<br> <label for="test10">-y1:</label>
+                    <input type="text" name="thisdontmatter" id="test10">
+                    <br><br>=</form>
+
+                <form id="mb" action="/action_page.php"><label for="test11">m:</label>
+                    <input type="text" name="stilldontmatter" id="test11">
+                    <br><br>*</form>
+                (x +
+                <form id="xc" action="/action_page3.php"><label for="test12">-x1:</label><input type="text" name="ineednewvariables" id="test12">
+                </form>
+                )
+                <br> <button type="button" onclick="sloInt()">
 Enter</button>
 
-<p id="intslo"></p>
-    
-   <script>
-  function sloInt() {
-   
-   var aaa = document.getElementById('ya');
-   var yaa = aaa.elements[0].value;
-   
-   var bbb = document.getElementById('mb');
-   var mbb = bbb.elements[0].value;
-   
-   var ccc = document.getElementById('xc');
-   var xcc = ccc.elements[0].value;
+                <p id="intslo"></p>
 
-   
-   var sint = xcc - yaa;
-   var msint = sint * mbb
- 
-document.getElementById("intslo").innerHTML = "y = " + mbb + "x" + " + " + msint ;
-}
-  </script>
-</center></p>
+                <script>
+                    function sloInt() {
 
-    
-    
-    
-    
-    
-    
-// Problem Statement
-	Mainly to check off requirements in the rubric, but the program checks if a number is negative or not.
-Plans & Pseudocode
-	Have values made, have accurate statements about the numbers produced.
+                        var aaa = document.getElementById('ya');
+                        var yaa = aaa.elements[0].value;
 
-<br><br><center>
+                        var bbb = document.getElementById('mb');
+                        var mbb = bbb.elements[0].value;
 
-<h2>Is It Negative?</h2>
-
-<p id="imsotired"></p>
-    
-   <script> 
-   var text = "";
-  var startingNumber = -5
-  var endingNumber = 10
-  
-  while (startingNumber < 0) {
-    numm++;
-      text += "<br>The statement " + numm + " is negative is true.";
-  }
-       
-else { text += "<br>The statement " + numm + " is negative is false.";
-    
- }
-document.getElementById("imsotired").innerHTML = text;
-
-  </script>
-</center>
-<br><br>
-    
-    <center>
-    <h2>Caesar Cipher</h2>
-    </center>
+                        var ccc = document.getElementById('xc');
+                        var xcc = ccc.elements[0].value;
 
 
-<p>Click the button to display the unicode of the first character in the string "HELLO WORLD".</p>
+                        var sint = xcc - yaa;
+                        var msint = sint * mbb
 
-<button onclick="caesFunc()">Try it</button>
-
-<p id="caes">
-
-<script>
-function caesFunc() {
-	var stringToEncode = "EAOO OEO";
-    var unicode;
-    var shiftedUnicode;
-    var encodedText = "";
-    var index = 0;
-    var lengthOfString = stringToEncode.length;
-    
-     for (var index = 0; index < lengthOfString; index++) {
-     unicode = stringToEncode.charCodeAt(index);
-    shiftedUnicode = unicode + 3;
-    encodedText += String.fromCharCode(shiftedUnicode);
-}    
-    
-    document.getElementById("caes").innerHTML = encodedText;
-    
-    }
-
-</script>
-</p>
+                        document.getElementById("intslo").innerHTML = "y = " + mbb + "x" + " + " + msint;
+                    }
+                </script>
+            </center>
+        </p>
 
 
 
-    
-    <footer style="font-size:15px;"><center> 
-     <a href="home.html">Home</a> 
-     <a href="access.html">Accessibility</a> <a href="experience.html">Experience</a> <a href="proficiencies.html">Proficiencies</a> <a href="interests.html">Interests</a></center></footer>
-</body>
+
+
+        // Problem Statement Mainly to check off requirements in the rubric, but the program checks if a number is negative or not. Plans & Pseudocode Have values made, have accurate statements about the numbers produced.
+
+        <br><br>
+        <center>
+
+            <h2>Is It Negative?</h2>
+
+            <p id="imsotired"></p>
+
+            <script>
+                var text = "";
+                var startingNumber = -5
+                var endingNumber = 10
+
+                while (startingNumber < 0) {
+                    numm++;
+                    text += "<br>The statement " + numm + " is negative is true.";
+                } else {
+                    text += "<br>The statement " + numm + " is negative is false.";
+
+                }
+                document.getElementById("imsotired").innerHTML = text;
+            </script>
+        </center>
+        <br><br>
+
+        <center>
+            <h2>Caesar Cipher</h2>
+        </center>
+
+
+        <p>Click the button to display the unicode of the first character in the string "HELLO WORLD".</p>
+
+        <button onclick="caesFunc()">Try it</button>
+
+        <p id="caes">
+
+            <script>
+                function caesFunc() {
+                    var stringToEncode = "EAOO OEO";
+                    var unicode;
+                    var shiftedUnicode;
+                    var encodedText = "";
+                    var index = 0;
+                    var lengthOfString = stringToEncode.length;
+
+                    for (var index = 0; index < lengthOfString; index++) {
+                        unicode = stringToEncode.charCodeAt(index);
+                        shiftedUnicode = unicode + 3;
+                        encodedText += String.fromCharCode(shiftedUnicode);
+                    }
+
+                    document.getElementById("caes").innerHTML = encodedText;
+
+                }
+            </script>
+        </p>
+
+
+
+
+        <footer style="font-size:15px;">
+            <center>
+                <a href="home.html">Home</a>
+                <a href="access.html">Accessibility</a> <a href="experience.html">Experience</a> <a href="proficiencies.html">Proficiencies</a> <a href="interests.html">Interests</a></center>
+        </footer>
+    </body>
+
 </html>
